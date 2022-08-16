@@ -1,2 +1,7 @@
 /temp
 /includes/config.inc.php
+/includes/serializations.inc.php
+/includes/settings-array.inc.php
+/en/includes/serializations.inc.php
+/en/includes/settings-array.inc.php
+
