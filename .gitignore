@@ -4,4 +4,6 @@
 /includes/settings-array.inc.php
 /en/includes/serializations.inc.php
 /en/includes/settings-array.inc.php
+.htaccess
+/en/.htaccess
 
