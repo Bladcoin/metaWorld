@@ -1,0 +1,5 @@
+/temp/*
+/includes/serializations.inc.php
+/includes/settings-array.inc.php
+/en/serializations.inc.php
+/en/settings-array.inc.php
