@@ -19,4 +19,4 @@ if (!empty($errors)) {
 	$smarty->assign('errors', $errors);
 }
 
-$smarty->display("../themes/dist/templates/index.tpl");
+$smarty->display("index.tpl");
