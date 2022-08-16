@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Host: http://cms-vers-6.loc/
+
+Sitemap: http://cms-vers-6.loc/sitemap.xml

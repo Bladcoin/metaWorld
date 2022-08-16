@@ -1,0 +1,104 @@
+<IfModule mod_autoindex>
+  Options -Indexes
+</IfModule>
+DirectoryIndex /public/section.php?sectionId=1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5
+RewriteEngine On
+RewriteRule ^index/page([^/]*)\.htm$ /public/section.php?sectionId=1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5&page=$1 [L]
+ErrorDocument 404 /public/error-404.php?rewrite=1d5a18e5e63a90eed8f6dea85193edf5
+
+
+#RewriteRule ^rss.xml$ /public/rss.php?rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^sitemap.xml$ /public/sitemap.php?rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^index\.htm$ http://localhost/ [L,R=301]
+
+RewriteRule ^dostavlyaem\-v\-lyubuyu\-tochku\-strany$ http://localhost//dostavlyaem-v-lyubuyu-tochku-strany/ [L,R=301]
+RewriteRule ^dostavlyaem\-v\-lyubuyu\-tochku\-strany/$ /public/section.php?%{QUERY_STRING}&sectionId=983&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^dostavlyaem\-v\-lyubuyu\-tochku\-strany/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=983&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^dostavlyaem\-v\-lyubuyu\-tochku\-strany/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=983&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^our\-team$ http://localhost/our-team/ [L,R=301]
+RewriteRule ^our\-team/$ /public/section.php?%{QUERY_STRING}&sectionId=1003&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^our\-team/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=1003&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^our\-team/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=1003&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^realizovannye\-raboty$ http://localhost/realizovannye-raboty/ [L,R=301]
+RewriteRule ^realizovannye\-raboty/$ /public/section.php?%{QUERY_STRING}&sectionId=1001&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^realizovannye\-raboty/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=1001&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^realizovannye\-raboty/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=1001&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^statistika\-$ http://localhost/statistika-/ [L,R=301]
+RewriteRule ^statistika\-/$ /public/section.php?%{QUERY_STRING}&sectionId=1000&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^statistika\-/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=1000&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^statistika\-/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=1000&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^tokenomika\-$ http://localhost/tokenomika-/ [L,R=301]
+RewriteRule ^tokenomika\-/$ /public/section.php?%{QUERY_STRING}&sectionId=999&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^tokenomika\-/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=999&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^tokenomika\-/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=999&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^informatsiya$ http://localhost/informatsiya/ [L,R=301]
+RewriteRule ^informatsiya/$ /public/section.php?%{QUERY_STRING}&sectionId=998&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^informatsiya/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=998&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^informatsiya/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=998&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^metavselennaya\-secondworld$ http://localhost/metavselennaya-secondworld/ [L,R=301]
+RewriteRule ^metavselennaya\-secondworld/$ /public/section.php?%{QUERY_STRING}&sectionId=996&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^metavselennaya\-secondworld/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=996&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^metavselennaya\-secondworld/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=996&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^novosti\-$ http://localhost/novosti-/ [L,R=301]
+RewriteRule ^novosti\-/$ /public/section.php?%{QUERY_STRING}&sectionId=975&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^novosti\-/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=975&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^novosti\-/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=975&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^novosti\-/geografiya\-raboty$ http://localhost/novosti-/geografiya-raboty/ [L,R=301]
+RewriteRule ^novosti\-/geografiya\-raboty/$ /public/section.php?%{QUERY_STRING}&sectionId=987&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^novosti\-/geografiya\-raboty/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=987&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^novosti\-/geografiya\-raboty/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=987&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^novosti\-/preimuschestva$ http://localhost/novosti-/preimuschestva/ [L,R=301]
+RewriteRule ^novosti\-/preimuschestva/$ /public/section.php?%{QUERY_STRING}&sectionId=986&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^novosti\-/preimuschestva/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=986&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^novosti\-/preimuschestva/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=986&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^novosti\-/vidy\-deyatelnosti$ http://localhost/novosti-/vidy-deyatelnosti/ [L,R=301]
+RewriteRule ^novosti\-/vidy\-deyatelnosti/$ /public/section.php?%{QUERY_STRING}&sectionId=985&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^novosti\-/vidy\-deyatelnosti/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=985&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^novosti\-/vidy\-deyatelnosti/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=985&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^dorozhnaya\-karta$ http://localhost/dorozhnaya-karta/ [L,R=301]
+RewriteRule ^dorozhnaya\-karta/$ /public/section.php?%{QUERY_STRING}&sectionId=984&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^dorozhnaya\-karta/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=984&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^dorozhnaya\-karta/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=984&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^faq$ http://localhost/faq/ [L,R=301]
+RewriteRule ^faq/$ /public/section.php?%{QUERY_STRING}&sectionId=988&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^faq/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=988&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^faq/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=988&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^faq/slajder$ http://localhost/faq/slajder/ [L,R=301]
+RewriteRule ^faq/slajder/$ /public/section.php?%{QUERY_STRING}&sectionId=991&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^faq/slajder/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=991&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^faq/slajder/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=991&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^faq/slajder/treugolnaya\-zagotovk$ http://localhost/faq/slajder/treugolnaya-zagotovk/ [L,R=301]
+RewriteRule ^faq/slajder/treugolnaya\-zagotovk/$ /public/section.php?%{QUERY_STRING}&sectionId=994&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^faq/slajder/treugolnaya\-zagotovk/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=994&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^faq/slajder/treugolnaya\-zagotovk/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=994&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^faq/slajder/kvadratnaya\-zagotovk$ http://localhost/faq/slajder/kvadratnaya-zagotovk/ [L,R=301]
+RewriteRule ^faq/slajder/kvadratnaya\-zagotovk/$ /public/section.php?%{QUERY_STRING}&sectionId=993&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^faq/slajder/kvadratnaya\-zagotovk/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=993&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^faq/slajder/kvadratnaya\-zagotovk/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=993&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^faq/slajder/pryamougolnaya\-zagotovka$ http://localhost/faq/slajder/pryamougolnaya-zagotovka/ [L,R=301]
+RewriteRule ^faq/slajder/pryamougolnaya\-zagotovka/$ /public/section.php?%{QUERY_STRING}&sectionId=992&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^faq/slajder/pryamougolnaya\-zagotovka/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=992&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^faq/slajder/pryamougolnaya\-zagotovka/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=992&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+
+RewriteRule ^o\-nas$ http://localhost/o-nas/ [L,R=301]
+RewriteRule ^o\-nas/$ /public/section.php?%{QUERY_STRING}&sectionId=989&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^o\-nas/page([0-9]+)\.htm$ /public/section.php?%{QUERY_STRING}&sectionId=989&page=$1&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+RewriteRule ^o\-nas/([^/]+)\.htm$ /public/article.php?%{QUERY_STRING}&fileName=$1&sectionId=989&rewrite=1d5a18e5e63a90eed8f6dea85193edf5 [L]
+

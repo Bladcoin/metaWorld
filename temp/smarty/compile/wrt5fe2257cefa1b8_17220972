@@ -1,0 +1,96 @@
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-12-22 17:57:32
+  from 'C:\xampp\htdocs\themes\dist\templates\header.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5fe2257cef96d8_34378052',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '8a1dde68bbbbbff76d9ab6dc9d732953e0e68e44' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\themes\\dist\\templates\\header.tpl',
+      1 => 1608622631,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:modules/meta.tpl' => 1,
+  ),
+),false)) {
+function content_5fe2257cef96d8_34378052 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\includes\\smarty\\plugins\\function.logo.php','function'=>'smarty_function_logo',),1=>array('file'=>'C:\\xampp\\htdocs\\includes\\smarty\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <?php $_smarty_tpl->_subTemplateRender("file:modules/meta.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+  <link rel="short icon"  href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/header__logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/css/style.min.css">
+</head>
+<!-- Добавить lock -->
+<body>   <div class="wrapper">
+         
+  
+  <!-- ?Подключение Header -->
+  <header class="header">
+    <div class="container header__container">
+        <div class="header__inner">
+            <div class="header__logotype">
+              <?php echo smarty_function_logo(array(),$_smarty_tpl);?>
+
+            </div>
+            <nav class="menu" id="menu-main">
+                <ul class="menu__list">
+                     <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['TREE']->value, 'navItem1', false, NULL, 'navItems1', array (
+));
+$_smarty_tpl->tpl_vars['navItem1']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['navItem1']->value) {
+$_smarty_tpl->tpl_vars['navItem1']->do_else = false;
+?>
+                        <?php if ($_smarty_tpl->tpl_vars['navItem1']->value['status'] == 'visible' && $_smarty_tpl->tpl_vars['navItem1']->value['top_menu'] == '1') {?>
+                    <li class="menu__item"><a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['navItem1']->value['url'], ENT_QUOTES, 'UTF-8', true);?>
+" class="menu__item-link"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['navItem1']->value['alias'], ENT_QUOTES, 'UTF-8', true);
+if ($_smarty_tpl->tpl_vars['navItem1']->value['sectionId'] == 851) {?><sup>®</sup><?php }?></a></li>
+                        
+                        <?php }?>
+                     <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
+                    <li class="menu__item menu__special">© <?php echo htmlspecialchars(smarty_modifier_date_format(time(),'%Y'), ENT_QUOTES, 'UTF-8', true);?>
+ ООО «Фрито Лей Мануфактуринг». Все права защищены.</li>
+                </ul>
+            </nav>
+            <!-- <div class="header__search">
+                <button href="#"><img src="/img/header/search.svg" alt=""></button>
+            </div> -->
+              
+                <!-- <div class="search-box">
+                    <input type="text" placeholder=" "><span></span>
+                    <button type="submit"><img src="/img/header/search.svg" alt=""></button>
+                </div> -->
+                <form class="search-box">
+                    <input type="text" class="search-txt" placeholder="Поиск">
+                    <button class="search-btn" type="submit"><img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/header/search.svg" alt=""></button>
+                 
+               
+            <div class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</header><?php }
+}

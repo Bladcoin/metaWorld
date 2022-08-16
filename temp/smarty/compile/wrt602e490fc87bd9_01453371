@@ -1,0 +1,275 @@
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2021-02-18 12:01:35
+  from 'C:\xampp\htdocs\themes\dist\templates\header.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_602e490fc86ad7_54329080',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '8a1dde68bbbbbff76d9ab6dc9d732953e0e68e44' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\themes\\dist\\templates\\header.tpl',
+      1 => 1610824515,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:modules/meta.tpl' => 1,
+  ),
+),false)) {
+function content_602e490fc86ad7_54329080 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\includes\\smarty\\plugins\\function.logo.php','function'=>'smarty_function_logo',),1=>array('file'=>'C:\\xampp\\htdocs\\includes\\smarty\\plugins\\function.fetch_section.php','function'=>'smarty_function_fetch_section',),2=>array('file'=>'C:\\xampp\\htdocs\\includes\\smarty\\plugins\\modifier.mb_wordwrap.php','function'=>'smarty_modifier_mb_wordwrap',),));
+?>
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<!--[if IE 9]> <html class="ie9" lang="en"> <![endif]--> 
+
+
+
+<head>
+
+  <?php $_smarty_tpl->_subTemplateRender("file:modules/meta.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+  <!-- favicons -->
+
+  <link rel="stylesheet" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/css/plugins.css">
+  <link rel="stylesheet" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/css/main.css">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/fav/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/fav/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/fav/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/fav/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/fav/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/fav/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/fav/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/fav/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/fav/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/fav/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/fav/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/fav/favicon-16x16.png">
+  <link rel="manifest" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/fav/manifest.json">
+
+  
+
+  <!--owl-carousel-->
+  <link rel="stylesheet" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/css/owl.carousel.min.css"> 
+  <link rel="stylesheet" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/css/owl.theme.default.min.css">
+
+  <!-- fonts -->
+
+  <link rel="stylesheet" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/fonts/Helvetica/stylesheet.css">
+
+  <!--slick-->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/slick/slick-theme.css"/>
+
+  <!-- slider -->
+
+  <link rel="stylesheet" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/css/additional.css">
+
+  <!--[if lt IE 9]>
+
+<?php echo '<script'; ?>
+ src="media/js/html5.js"><?php echo '</script'; ?>
+>
+
+<?php echo '<script'; ?>
+ src="media/js/respond.js"><?php echo '</script'; ?>
+> 
+
+<![endif]-->
+
+</head>
+
+
+
+<body>
+  <div class="site-wrapper">
+    <input type="checkbox" id="menu" class="hide">
+    <div class="main-menu-wrapper">
+      <div class="main-menu">
+        <div class="container-2">
+          <div class="menu-content">
+            <div class="language hidden-md hidden-lg">
+              <div class="item active">
+                <a href="">
+                  <p>rus</p>
+                </a>
+              </div>  
+              <div class="item">
+                <a href="">
+                  <p>eng</p>
+                </a>
+              </div>
+              <div class="item">
+                <a href="">
+                  <p>uzb</p>
+                </a>
+              </div>
+            </div>
+
+            <div class="big-links-wrapper">
+              <ul>
+              <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['TREE']->value, 'navItem1', false, NULL, 'navItems1', array (
+));
+$_smarty_tpl->tpl_vars['navItem1']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['navItem1']->value) {
+$_smarty_tpl->tpl_vars['navItem1']->do_else = false;
+?>
+              <?php if ($_smarty_tpl->tpl_vars['navItem1']->value['status'] == 'visible' && $_smarty_tpl->tpl_vars['navItem1']->value['top_menu'] == '1') {?>
+                <li <?php if ($_smarty_tpl->tpl_vars['section']->value['sectionId'] == $_smarty_tpl->tpl_vars['navItem1']->value['sectionId']) {?>class="active<?php }?>">
+                  <a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['navItem1']->value['url'], ENT_QUOTES, 'UTF-8', true);?>
+"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['navItem1']->value['alias'], ENT_QUOTES, 'UTF-8', true);?>
+</a>
+                </li>
+              <?php }?>
+              <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+              </ul>
+            </div>
+
+            <div class="middle-links-wrapper">
+              <div class="links">
+                <ul>
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['TREE']->value, 'navItem1', false, NULL, 'navItems1', array (
+));
+$_smarty_tpl->tpl_vars['navItem1']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['navItem1']->value) {
+$_smarty_tpl->tpl_vars['navItem1']->do_else = false;
+?>
+                <?php if ($_smarty_tpl->tpl_vars['navItem1']->value['status'] == 'hidden' && $_smarty_tpl->tpl_vars['navItem1']->value['top_menu'] == '1') {?>
+                  <li>
+                    <a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['navItem1']->value['url'], ENT_QUOTES, 'UTF-8', true);?>
+"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['navItem1']->value['alias'], ENT_QUOTES, 'UTF-8', true);?>
+</a>
+                  </li>
+                <?php }?>
+                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                </ul>
+              </div>
+
+                          <!-- <div class="menu-socials">
+                <div class="item">
+                  <a href="">
+                    <i class="icon-facebook"></i>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="">
+                    <i class="icon-twitter"></i>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="">
+                    <i class="icon-inst"></i>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="">
+                    <i class="icon-youtube"></i>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="">
+                    <i class="icon-rss"></i>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="">
+                    <i class="icon-in"></i>
+                  </a>
+                </div>
+              </div> -->
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="hidden-header" id="top-div"></div>
+      <div class="header-wrapper header-scroll">
+        <div class="container-2">
+          <div class="header-content">
+            <div class="header-logo">
+              <div class="img-content">
+                <?php echo smarty_function_logo(array(),$_smarty_tpl);?>
+
+              </div>
+              <?php echo smarty_function_fetch_section(array('assign'=>'main','section'=>1),$_smarty_tpl);?>
+
+              <div class="desc-content">
+                <p><?php echo smarty_modifier_mb_wordwrap($_smarty_tpl->tpl_vars['main']->value['dop'],45,"<br />\n",false);?>
+</p>
+              </div>
+            </div>
+            <div class="header-actions">
+              <div class="language hidden-xs hidden-sm">
+                <div class="item active">
+                  <a href="">
+                    <p>rus</p>
+                  </a>
+                </div>  
+                <div class="item">
+                  <a href="">
+                    <p>eng</p>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="">
+                    <p>uzb</p>
+                  </a>
+                </div>
+              </div>
+              <div class="menu-btn-wrapper">
+                <label for="menu">
+                  <div class="menu-btn">
+                    <div class="lines">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header><?php }
+}

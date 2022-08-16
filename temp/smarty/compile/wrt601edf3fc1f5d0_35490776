@@ -1,0 +1,80 @@
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2021-02-06 19:26:07
+  from 'C:\xampp\htdocs\themes\dist\templates\index.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_601edf3fc15941_57551245',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'b809ba8506cfccf12a3e526fe6b7963b253fb808' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\themes\\dist\\templates\\index.tpl',
+      1 => 1610969873,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:header.tpl' => 1,
+    'file:footer.tpl' => 1,
+  ),
+),false)) {
+function content_601edf3fc15941_57551245 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\includes\\smarty\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),1=>array('file'=>'C:\\xampp\\htdocs\\includes\\smarty\\plugins\\function.fetch_sections.php','function'=>'smarty_function_fetch_sections',),));
+$_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>$_smarty_tpl->tpl_vars['webpage']->value['title'],'keywords'=>$_smarty_tpl->tpl_vars['webpage']->value['keywords'],'description'=>$_smarty_tpl->tpl_vars['webpage']->value['description']), 0, false);
+?>
+<main>
+      <div class="main-bnr-wrapper">
+        <div class="container-2">
+          <div class="main-bnr">
+            <div class="desc-content project-content">
+              <?php echo smarty_modifier_replace($_smarty_tpl->tpl_vars['section']->value['summary'],'<h1','<h1 class="project-title"');?>
+
+            </div>
+            <div class="img-content">
+              <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['section']->value['images']['original']['url'], ENT_QUOTES, 'UTF-8', true);?>
+">
+            </div>
+          </div>
+            <?php echo smarty_function_fetch_sections(array('assign'=>'catalogSections','from'=>$_smarty_tpl->tpl_vars['catalog']->value['sectionId']),$_smarty_tpl);?>
+
+              <div class="project__content">
+
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['catalogSections']->value, 'maincatalog', false, NULL, 'catalogSections', array (
+));
+$_smarty_tpl->tpl_vars['maincatalog']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['maincatalog']->value) {
+$_smarty_tpl->tpl_vars['maincatalog']->do_else = false;
+?>
+              <?php if ($_smarty_tpl->tpl_vars['maincatalog']->value['sectionId'] == 870 && $_smarty_tpl->tpl_vars['maincatalog']->value['sectionId'] == 871 && $_smarty_tpl->tpl_vars['maincatalog']->value['sectionId'] == 872) {?>
+                  <div class="project__content-articles">
+                    <h2 class="project__content-articles__title"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['maincatalog']->value['name'], ENT_QUOTES, 'UTF-8', true);?>
+</h2>
+                    <div class="project__content-inner">
+                      <div class="project__body">
+                        <?php echo smarty_modifier_replace($_smarty_tpl->tpl_vars['maincatalog']->value['summary'],'<h3','<h3 class="project__body-title"');?>
+
+                          <a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['maincatalog']->value['url'], ENT_QUOTES, 'UTF-8', true);?>
+" class="project__body-link">Read more</a>
+                        </div>
+                        <div class="project__img">
+                            <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['maincatalog']->value['images']['original']['url'], ENT_QUOTES, 'UTF-8', true);?>
+">
+                        </div>
+                    </div>
+              </div>
+              <?php }?>  
+            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+          </div>
+        </div>
+      </div>
+    </main>
+<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}

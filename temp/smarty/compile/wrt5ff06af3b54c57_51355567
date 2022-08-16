@@ -1,0 +1,186 @@
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2021-01-02 13:45:39
+  from 'C:\xampp\htdocs\themes\dist\templates\index.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5ff06af3b51a95_67522678',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'b809ba8506cfccf12a3e526fe6b7963b253fb808' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\themes\\dist\\templates\\index.tpl',
+      1 => 1608529056,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:header.tpl' => 1,
+    'file:footer.tpl' => 1,
+  ),
+),false)) {
+function content_5ff06af3b51a95_67522678 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\includes\\smarty\\plugins\\function.fetch_sliders.php','function'=>'smarty_function_fetch_sliders',),1=>array('file'=>'C:\\xampp\\htdocs\\includes\\smarty\\plugins\\function.fetch_section.php','function'=>'smarty_function_fetch_section',),2=>array('file'=>'C:\\xampp\\htdocs\\includes\\smarty\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),3=>array('file'=>'C:\\xampp\\htdocs\\includes\\smarty\\plugins\\function.fetch_sections.php','function'=>'smarty_function_fetch_sections',),));
+$_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>$_smarty_tpl->tpl_vars['webpage']->value['title'],'keywords'=>$_smarty_tpl->tpl_vars['webpage']->value['keywords'],'description'=>$_smarty_tpl->tpl_vars['webpage']->value['description']), 0, false);
+?>
+<main class="main">
+     <div class="gallery">
+        <div class="gallery__inner">
+            <div class="swiper-container gallery__carousel">
+              <div class="swiper-wrapper">
+                <?php echo smarty_function_fetch_sliders(array('assign'=>'sectionSliders','section'=>'slider','limit'=>10,'orderBy'=>'orderBy'),$_smarty_tpl);?>
+
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['sectionSliders']->value, 'slider', false, NULL, 'sectionSliders', array (
+));
+$_smarty_tpl->tpl_vars['slider']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['slider']->value) {
+$_smarty_tpl->tpl_vars['slider']->do_else = false;
+?>
+                  <div class="swiper-slide gallery__slide">
+                    <a class="gallery__image image-bg" target="_blank" href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['slider']->value['links'], ENT_QUOTES, 'UTF-8', true);?>
+" style="background-image:url(<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['slider']->value['images']['original']['url'], ENT_QUOTES, 'UTF-8', true);?>
+);" 
+                    data-src="url(<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/gallery-banners/gallery-mobile-1.png)">
+                  </a>
+                  </div>
+                <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+              </div>
+              <div class="controls__dots gallery__controls">
+                <div class="swiper-button-prev gallery__prev">
+                  <svg viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.689819 9.38766C0.187542 9.88994 0.187542 10.7043 0.689819 11.2066L8.8749 19.3916C9.37717 19.8939 10.1915 19.8939 10.6938 19.3916C11.1961 18.8894 11.1961 18.075 10.6938 17.5727L3.41818 10.2971L10.6938 3.02149C11.1961 2.51921 11.1961 1.70486 10.6938 1.20258C10.1915 0.700306 9.37718 0.700305 8.8749 1.20258L0.689819 9.38766ZM20.1675 9.01096L1.59927 9.01095L1.59927 11.5833L20.1675 11.5833L20.1675 9.01096Z"/>
+                    </svg>
+                    
+                </div>
+                <div class="swiper-button-next gallery__next">
+                  <svg viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.5559 10.4334C19.0141 9.97521 19.0141 9.23231 18.5559 8.7741L11.0889 1.30718C10.6307 0.848967 9.88784 0.848967 9.42963 1.30717C8.97142 1.76538 8.97142 2.50828 9.42963 2.96649L16.0669 9.60376L9.42963 16.241C8.97142 16.6992 8.97142 17.4421 9.42963 17.9003C9.88783 18.3586 10.6307 18.3586 11.0889 17.9003L18.5559 10.4334ZM0.787109 10.7771L17.7262 10.7771L17.7262 8.43045L0.787109 8.43045L0.787109 10.7771Z"/>
+                    </svg>
+                </div>
+              </div>
+              </div>
+        </div>
+        <div class="index__anim">
+          <div class="index__anim-dots">
+            <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/main-anim.svg" alt="">
+          </div>
+          <div class="index__anim-dots">
+            <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/main-anim.svg" alt="">
+          </div>
+          <div class="index__anim-dots">
+            <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/main-anim.svg" alt="">
+          </div>
+        </div>
+        
+    </div>
+
+
+     <div class="info info__container">
+        <div class="info__chips info__veget-none">
+          <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/info/chips.png" alt="">
+        </div>
+        <div class="info__onion info__veget-none">
+          <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/info/onion-1.png" alt="">
+        </div>
+        <div class="info__onion--last info__veget-none">
+          <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/info/onion-2.png" alt="">
+        </div>
+        <?php echo smarty_function_fetch_section(array('assign'=>'philosofy','section'=>851),$_smarty_tpl);?>
+
+        <div class="info__inner">
+          <div class="info__video image-bg" style="background-image: url(<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['philosofy']->value['images']['original']['url'], ENT_QUOTES, 'UTF-8', true);?>
+)">
+            <button class="info__video-btn">
+             
+              <span class="info__icon-container icon__container">
+                <svg width="80" height="58" viewBox="0 0 80 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.9" d="M77.6441 9.19871C76.7324 5.71152 74.0623 2.962 70.6758 2.02314C64.489 0.279541 39.7416 0.279541 39.7416 0.279541C39.7416 0.279541 14.9942 0.279541 8.80739 1.95608C5.48603 2.89494 2.7508 5.71152 1.83905 9.19871C0.210938 15.5695 0.210938 28.7806 0.210938 28.7806C0.210938 28.7806 0.210938 42.0588 1.83905 48.3626C2.7508 51.8498 5.42091 54.5993 8.80739 55.5382C15.0594 57.2818 39.7416 57.2818 39.7416 57.2818C39.7416 57.2818 64.489 57.2818 70.6758 55.6052C74.0623 54.6664 76.7324 51.9168 77.6441 48.4296C79.2723 42.0588 79.2723 28.8477 79.2723 28.8477C79.2723 28.8477 79.3374 15.5695 77.6441 9.19871Z" fill="#E52529"/>
+                  <path d="M31.8633 40.9851L52.4427 28.7799L31.8633 16.5747V40.9851Z" fill="white"/>
+                  </svg>
+              </span>
+            </button>
+          </div>
+          <div class="info__content">
+            <h4 class="info__content-title"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['philosofy']->value['name'], ENT_QUOTES, 'UTF-8', true);?>
+<sup>®</sup></h4>
+              <?php echo smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace(smarty_modifier_replace($_smarty_tpl->tpl_vars['philosofy']->value['summary'],'<p','<p class="info__content-subtitle"'),'<span>','<strong>'),'</span>','</strong>'),'<em>','<sup>'),'</em>','</sup>');?>
+
+              <a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['philosofy']->value['url'], ENT_QUOTES, 'UTF-8', true);?>
+" class="info__content-btn btn-more">Узнать больше</a>
+          </div>
+        </div>
+    </div> 
+
+     <div class="cards image-bg">
+        <div class="swiper-container cards__carousel">
+          <div class="swiper-wrapper">
+          <?php echo smarty_function_fetch_section(array('assign'=>'products','section'=>852),$_smarty_tpl);?>
+
+              <?php echo smarty_function_fetch_sections(array('assign'=>'catalogSections','from'=>$_smarty_tpl->tpl_vars['products']->value['sectionId'],'status'=>'visible'),$_smarty_tpl);?>
+
+              <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['catalogSections']->value, 'subcatalog', false, NULL, 'catalogSections', array (
+  'iteration' => true,
+));
+$_smarty_tpl->tpl_vars['subcatalog']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['subcatalog']->value) {
+$_smarty_tpl->tpl_vars['subcatalog']->do_else = false;
+$_smarty_tpl->tpl_vars['__smarty_foreach_catalogSections']->value['iteration']++;
+?>
+              <div class="swiper-slide cards__slide wow animate-all animate animate__delay-<?php echo htmlspecialchars((isset($_smarty_tpl->tpl_vars['__smarty_foreach_catalogSections']->value['iteration']) ? $_smarty_tpl->tpl_vars['__smarty_foreach_catalogSections']->value['iteration'] : null), ENT_QUOTES, 'UTF-8', true);?>
+s">
+                  <a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['subcatalog']->value['url'], ENT_QUOTES, 'UTF-8', true);?>
+" class="cards__inner" style="background-color: <?php echo htmlspecialchars($_smarty_tpl->tpl_vars['subcatalog']->value['dop'], ENT_QUOTES, 'UTF-8', true);?>
+;">
+
+                    <div class="cards__image">
+                      <div class="cards__image-inner image-bg" style="background-image: url(<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['subcatalog']->value['images']['medium']['url'], ENT_QUOTES, 'UTF-8', true);?>
+);"></div>
+                    </div>
+                      <div class="cards__content cards__content-mb">
+                        <h2 class="cards__content-title"><?php echo $_smarty_tpl->tpl_vars['subcatalog']->value['section_icon'];?>
+</h2>
+                        <p><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['subcatalog']->value['name'], ENT_QUOTES, 'UTF-8', true);?>
+</p>
+                        <div class="cards__btn">Подробнее</div>
+                      </div>
+                  </a>
+              </div>
+              <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
+              
+
+          </div>
+          <div class="swiper__position cards__controls">
+            <div class="swiper-button-prev cards__prev">
+              <svg viewBox="0 0 83 38" xmlns="http://www.w3.org/2000/svg">
+                <path d="M82.2428 20.5056C83.2191 19.5292 83.2191 17.9463 82.2428 16.97L66.3329 1.06012C65.3566 0.0838053 63.7737 0.0838055 62.7974 1.06012C61.8211 2.03643 61.8211 3.61934 62.7974 4.59565L76.9395 18.7378L62.7974 32.8799C61.8211 33.8562 61.8211 35.4391 62.7974 36.4155C63.7737 37.3918 65.3566 37.3918 66.3329 36.4155L82.2428 20.5056ZM0.387696 21.2378L80.4751 21.2378L80.4751 16.2378L0.387695 16.2378L0.387696 21.2378Z"/>
+                </svg>
+            </div>
+            <div class="swiper-button-next cards__next">
+              <svg viewBox="0 0 83 38" xmlns="http://www.w3.org/2000/svg">
+                <path d="M82.2428 20.5056C83.2191 19.5292 83.2191 17.9463 82.2428 16.97L66.3329 1.06012C65.3566 0.0838053 63.7737 0.0838055 62.7974 1.06012C61.8211 2.03643 61.8211 3.61934 62.7974 4.59565L76.9395 18.7378L62.7974 32.8799C61.8211 33.8562 61.8211 35.4391 62.7974 36.4155C63.7737 37.3918 65.3566 37.3918 66.3329 36.4155L82.2428 20.5056ZM0.387696 21.2378L80.4751 21.2378L80.4751 16.2378L0.387695 16.2378L0.387696 21.2378Z"/>
+                </svg>
+            </div>
+          </div>
+      </div>
+    </div> 
+  </main>
+<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}

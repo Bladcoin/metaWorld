@@ -1,0 +1,413 @@
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-11-25 04:57:32
+  from 'C:\xampp\htdocs\themes\dist\templates\index.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5fbdd62c6755c6_97352220',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'b809ba8506cfccf12a3e526fe6b7963b253fb808' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\themes\\dist\\templates\\index.tpl',
+      1 => 1606199478,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:header.tpl' => 1,
+    'file:footer.tpl' => 1,
+  ),
+),false)) {
+function content_5fbdd62c6755c6_97352220 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\includes\\smarty\\plugins\\function.fetch_sliders.php','function'=>'smarty_function_fetch_sliders',),1=>array('file'=>'C:\\xampp\\htdocs\\includes\\smarty\\plugins\\function.fetch_section.php','function'=>'smarty_function_fetch_section',),2=>array('file'=>'C:\\xampp\\htdocs\\includes\\smarty\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),3=>array('file'=>'C:\\xampp\\htdocs\\includes\\smarty\\plugins\\function.fetch_articles.php','function'=>'smarty_function_fetch_articles',),));
+$_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('title'=>$_smarty_tpl->tpl_vars['webpage']->value['title'],'keywords'=>$_smarty_tpl->tpl_vars['webpage']->value['keywords'],'description'=>$_smarty_tpl->tpl_vars['webpage']->value['description']), 0, false);
+?>
+<main data-aos="fade" data-aos-delay="0">
+
+      <!-- bnr-slider -->
+      <div class="bnr-slider">
+        <div class="bnr-carousel">
+          <div class="carousel-items flickity-main-slider flickity-btn-1">
+            <?php echo smarty_function_fetch_sliders(array('assign'=>'sectionSliders','section'=>'slider','limit'=>10,'orderBy'=>'orderBy'),$_smarty_tpl);?>
+
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['sectionSliders']->value, 'slider', false, NULL, 'sectionSliders', array (
+));
+$_smarty_tpl->tpl_vars['slider']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['slider']->value) {
+$_smarty_tpl->tpl_vars['slider']->do_else = false;
+?>
+            <figure class="box-xs-10">
+              <div class="img-content">
+                <div class="bg-shadow fuller z-index-1"></div>
+                <div class="img box-xs-10" style="background-image: url(<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['slider']->value['images']['original']['url'], ENT_QUOTES, 'UTF-8', true);?>
+);" ></div>
+              </div>
+              <div class="carousel-content z-index-1 relative">
+                <div class="align-i-center relative">
+                  <div class="container">
+                    <div class="box-xs-10 box-md-5 h1-style-1">
+                      <div class="wrapper">
+                        <h1><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['slider']->value['title'], ENT_QUOTES, 'UTF-8', true);?>
+</h1>
+                        <p><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['slider']->value['alias'], ENT_QUOTES, 'UTF-8', true);?>
+</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </figure>
+            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+          </div>
+        </div>
+      </div>
+
+      <div class="short-services">
+        <div class="container p-v-md">
+          <?php echo smarty_function_fetch_section(array('assign'=>'product','section'=>828),$_smarty_tpl);?>
+
+          <div class="entry-header h1-style-2 m-v-30">
+            <?php echo smarty_modifier_replace($_smarty_tpl->tpl_vars['product']->value['summary'],'<h2','<h2 class="h1"');?>
+
+          </div>
+
+
+          <?php echo smarty_function_fetch_articles(array('assign'=>'sectionArticles','limit'=>2,'type_content'=>'products'),$_smarty_tpl);?>
+
+         
+          <div class="short-services-items boxes-2 figure-m-v-20 parag-gray m-v-30">
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['sectionArticles']->value, 'article', false, NULL, 'sectionArticles', array (
+));
+$_smarty_tpl->tpl_vars['article']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['article']->value) {
+$_smarty_tpl->tpl_vars['article']->do_else = false;
+?>
+            <figure>
+              <div class="img-content">
+                <div class="img" style="background-image: url(<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['article']->value['images']['medium']['url'], ENT_QUOTES, 'UTF-8', true);?>
+);"></div>
+                <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['article']->value['images']['medium']['url'], ENT_QUOTES, 'UTF-8', true);?>
+">
+              </div>
+              <div class="desc-content">
+                <span class="btn-def">
+                  <a href="services-article.html">Подробнее</a>
+                </span>
+                <?php echo $_smarty_tpl->tpl_vars['article']->value['summary'];?>
+
+              </div>
+            </figure>
+            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container text-center rectwand-right">
+        <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/rectwand-right.png">
+      </div>
+
+      <div class="our-advantages">
+        <div class="container p-v-md">
+          <div class="entry-header h1-style-2">
+            <h2 class="h1"><thin>Преимущества использования</thin> UzBond</h2>
+            <span class="opacity-text">Почему надежнее с нами?</span>
+          </div>
+          <div class="our-advantages-items boxes-3 figure-m-v-20">
+            <figure>
+              <div class="cap-content">
+                <span class="num">01</span>
+                <h4>Наши ценности</h4>
+              </div>
+              <div class="desc-content">
+                <ul>
+                  <li>Надежность</li>
+                  <li>Прозрачность</li>
+                  <li>Ответственность</li>
+                  <li>Согласованность</li>
+                  <li>Быть правильным и постоянным примером для подражания</li>
+                </ul>
+              </div>
+            </figure>
+            <figure>
+              <div class="cap-content">
+                <span class="num">02</span>
+                <h4>Надежность</h4>
+              </div>
+              <div class="desc-content">
+                <p>Все наши отношения с клиентами и деловыми партнерами строятся на постоянстве, взаимном доверии и честности. Наши слова, решения и идеи – это единое и согласованное целое. Каждое, данное нами слово и обязательство непременно будет исполнено. Мы делаем все, для того чтобы сохранить и улучшить свою репутацию и положение</p>
+              </div>
+            </figure>
+            <figure>
+              <div class="cap-content">
+                <span class="num">03</span>
+                <h4>Согласованность</h4>
+              </div>
+              <div class="desc-content">
+                <p>Первоочередная цель нашей компании  – быть наиболее предпочитаемым партнером по решениям и участвовать в утвержденных на международном уровне проектах, благодаря нашему, сфокусированному на довольстве клиентов, подходу и качеству и надежности поставляемых нами услуг, и оставаться на позиции лидирующей, передовой и надежной компании </p>
+              </div>
+            </figure>
+            <figure>
+              <div class="cap-content">
+                <span class="num">04</span>
+                <h4>Ответственность</h4>
+              </div>
+              <div class="desc-content">
+                <p> Наш опыт работ в секторе, инновационная и динамичная структура, а также значение, которое мы придаем качеству и ассортименту продукции, позволяют нам работать, направляя все усилия на предоставление надежных и качественных продукции и услуг. Благодаря нашему опыту, который принесли наши постоянные и беспрерывные работы, мы, на правах предприятия, с надеждой смотрящего в будущее, несем свои знания к лучшему и инновациям, и исполняем все свои обязательства на всех этапах, как в процессе продажи, так и в послепродажных процессах.</p>
+              </div>
+            </figure>
+            <figure>
+              <div class="cap-content">
+                <span class="num">05</span>
+                <h4>Прозрачность</h4>
+              </div>
+              <div class="desc-content">
+                <p> Мы обладаем человеческими ресурсами, техническими знаниями и оборудованием, необходимыми для выполнения работы наилучшим образом. Делясь с клиентами и деловыми партнерами всеми данными и деталями каждого из процессов, мы стараемся сделать все наиболее хорошо и правильно.</p>
+              </div>
+            </figure>
+            <figure>
+              <div class="cap-content">
+                <span class="num">06</span>
+                <h4>Быть правильным и постоянным примером для подражания</h4>
+              </div>
+              <div class="desc-content">
+                <p> Мы обладаем человеческими ресурсами, техническими знаниями и оборудованием, необходимыми для выполнения работы наилучшим образом. Делясь с клиентами и деловыми партнерами всеми данными и деталями каждого из процессов, мы стараемся сделать все наиболее хорошо и правильно.</p>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center rectwand-left">
+        <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/rectwand-left.png">
+      </div>
+
+      <div class="short-about">
+        <div class="container p-v-md">
+          <div class="entry-content row text-item">
+            <div class="entry-header h1-style-1">
+              <h2 class="h1"><thin>Компания</thin> Alstar</h2>
+            </div>
+            <div class="col-md-6 p-h-15">
+              <br>
+              <p>UzBond  был основан с целью осуществлять производство алюминиевых панелей фасадного покрытия марки “ UzBond ” класса “ A2 и B1, (огнеупорность и не поддерживающий горению </p>
+              <p>Наш опыт работы, инновационная и динамичная структура, а также значение, которое мы придаем качеству и ассортименту продукции, позволяют нам работать, направляя все свои усилия на предоставление всегда надежных и качественных продукции и услуг.  Благодаря нашему опыту, который принесли наши постоянные и беспрерывные работы, мы, на правах предприятия, с надеждой смотрящего в будущее, несем свои  знания к лучшему и инновациям, и исполняем все свои обязательства на всех этапах, как в процессе продажи, так и в послепродажных процессах.</p>
+              <span class="btn-def">
+                <a href="">Читать подробнее</a>
+              </span>
+            </div>
+            <div class="col-md-6 p-h-15">
+              <a href="https://www.youtube.com/watch?v=txYbm0OPP7E" data-fancybox>
+                <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/promo.jpg');"></div>
+              </a>
+            </div>
+          </div>
+          <div class="short-cer-items boxes-4 figure-m-v-20 owl-carousel text-center m-v-30 p-v-md">
+            <figure>
+              <a href="img/other/cer-1.jpg" data-fancybox>
+                <div class="img-content">
+                  <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/cer-1.jpg">
+                </div>
+              </a>
+            </figure>
+            <figure>
+              <a href="img/other/cer-2.jpg" data-fancybox>
+                <div class="img-content">
+                  <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/cer-2.jpg">
+                </div>
+              </a>
+            </figure>
+            <figure>
+              <a href="img/other/cer-3.jpg" data-fancybox>
+                <div class="img-content">
+                  <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/cer-3.jpg">
+                </div>
+              </a>
+            </figure>
+            <figure>
+              <a href="img/other/cer-4.jpg" data-fancybox>
+                <div class="img-content">
+                  <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/cer-4.jpg">
+                </div>
+              </a>
+            </figure>
+            <figure>
+              <a href="img/other/cer-1.jpg" data-fancybox>
+                <div class="img-content">
+                  <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/cer-1.jpg">
+                </div>
+              </a>
+            </figure>
+            <figure>
+              <a href="img/other/cer-1.jpg" data-fancybox>
+                <div class="img-content">
+                  <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/cer-1.jpg">
+                </div>
+              </a>
+            </figure>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="short-advantages">
+        <div class="container p-v-md">
+          <div class="entry-header h1-style-2 m-v-30">
+            <h2 class="h1">Преимущества</h2>
+            <h4>Имеем отличную  репутацию в рыночной экономике</h4>
+          </div>
+          <div class="short-advantages-items m-v-30 boxes-4 figure-m-v-20">
+            <figure>
+              <div class="img-content">
+                <i class="icm icm-award"><i class="icm icm-award mirror"></i></i>
+              </div>
+              <div class="desc-content">
+                <h4>Опыт работы более 6 лет</h4>
+                <p>Обращаем Ваше внимание, что текстовая информация на сайте должна быть индивидуальной</p>
+              </div>
+            </figure>
+            <figure>
+              <div class="img-content">
+                <i class="icm icm-value"><i class="icm icm-value mirror"></i></i>
+              </div>
+              <div class="desc-content">
+                <h4>Высокое качество</h4>
+                <p>Обращаем Ваше внимание, что текстовая информация на сайте должна быть индивидуальной</p>
+              </div>
+            </figure>
+            <figure>
+              <div class="img-content">
+                <i class="icm icm-sale"><i class="icm icm-sale mirror"></i></i>
+              </div>
+              <div class="desc-content">
+                <h4>Цены</h4>
+                <p>Обращаем Ваше внимание, что текстовая информация на сайте должна быть индивидуальной</p>
+              </div>
+            </figure>
+            <figure>
+              <div class="img-content">
+                <i class="icm icm-idea"><i class="icm icm-idea mirror"></i></i>
+              </div>
+              <div class="desc-content">
+                <h4>Современный подход</h4>
+                <p>Обращаем Ваше внимание, что текстовая информация на сайте должна быть индивидуальной</p>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="short-projects">
+        <div class="container p-v-md">
+          <div class="entry-header h1-style-2 m-v-30">
+            <h2 class="h1">Примеры работ и применение продукта </h2>
+            <h4>Огнестойкие алюминиевые композитные панели</h4>
+          </div>
+          <div class="short-projects-items boxes-4 owl-carousel">
+            <figure>
+              <a href="gallery-article.html">
+                <div class="img-content">
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-1.jpg');">Торговые центры</div>
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-1.jpg');">Торговые центры</div>
+                </div>
+              </a>
+            </figure>
+            <figure>
+              <a href="gallery-article.html">
+                <div class="img-content">
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-2.jpg');">Торговые центры</div>
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-2.jpg');">Торговые центры</div>
+                </div>
+              </a>
+            </figure>
+            <figure>
+              <a href="gallery-article.html">
+                <div class="img-content">
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-3.jpg');">Торговые центры</div>
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-3.jpg');">Торговые центры</div>
+                </div>
+              </a>
+            </figure>
+            <figure>
+              <a href="gallery-article.html">
+                <div class="img-content">
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-4.jpg');">Торговые центры</div>
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-4.jpg');">Торговые центры</div>
+                </div>
+              </a>
+            </figure>
+            <figure>
+              <a href="gallery-article.html">
+                <div class="img-content">
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-1.jpg');">Торговые центры</div>
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-1.jpg');">Торговые центры</div>
+                </div>
+              </a>
+            </figure>
+            <figure>
+              <a href="gallery-article.html">
+                <div class="img-content">
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-2.jpg');">Торговые центры</div>
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-2.jpg');">Торговые центры</div>
+                </div>
+              </a>
+            </figure>
+            <figure>
+              <a href="gallery-article.html">
+                <div class="img-content">
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-3.jpg');">Торговые центры</div>
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-3.jpg');">Торговые центры</div>
+                </div>
+              </a>
+            </figure>
+            <figure>
+              <a href="gallery-article.html">
+                <div class="img-content">
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-4.jpg');">Торговые центры</div>
+                  <div class="img" style="background-image: url('<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/other/short-projects-4.jpg');">Торговые центры</div>
+                </div>
+              </a>
+            </figure>
+
+          </div>
+        </div>
+        <br><br>
+      </div>
+    </main>
+<?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}

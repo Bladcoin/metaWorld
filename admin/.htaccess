@@ -1,0 +1,16 @@
+<IfModule mod_autoindex>
+  Options -Indexes
+</IfModule>
+DirectoryIndex login.php?action[selfRedirect]=true
+DirectoryIndex /admin/login.php
+ErrorDocument 404 "Page Not Found"
+
+RewriteEngine On
+
+#COMPRESSOR_START
+#RewriteRule ^([a-z][a-z])/(.+\.(css|js))$ /admin/compressor.php?path=$2 [L]
+#RewriteRule ^(.+\.(css|js))$ compressor.php?path=$1 [L]
+#COMPRESSOR_END
+
+RewriteRule ^([a-z][a-z])/(.+)$ ../admin/$2?SITE_LANG=$1 [QSA]
+

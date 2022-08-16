@@ -1,0 +1,190 @@
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-11-10 12:41:40
+  from 'C:\xampp\htdocs\themes\dist\templates\footer.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5faa7c749f3ce6_40689043',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '04fc907120117c6faac1b4b323041ca0c32b7afd' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\themes\\dist\\templates\\footer.tpl',
+      1 => 1604844965,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5faa7c749f3ce6_40689043 (Smarty_Internal_Template $_smarty_tpl) {
+?><footer>
+    <div class="footer_bg" style="background-image:url(<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/footer_bg.png);">
+      <div class="hidden_block">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="footer_social">
+            <div class="partners col-md-8">
+              <a href="javascript:;">
+                <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/social-1.png">
+              </a>
+              <a href="javascript:;">
+                <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/social-2.png">
+              </a>
+              <a href="javascript:;">
+                <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/social-3.png">
+              </a>
+              <a href="javascript:;">
+                <img src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/social-4.png">
+              </a>
+            </div>
+            <div class="social_icons col-md-4">
+              <a href="javascript:;">
+                <span class="icm icmlinkedin-logo"></span>
+              </a>
+              <a href="javascript:;">
+                <span class="icm icmfacebook"></span>
+              </a>
+            </div>
+          </div>
+          <div class="footer_navigation">
+            <ul class="footer_navigation_content">
+              <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['TREE']->value, 'navItem1', false, NULL, 'navItems1', array (
+));
+$_smarty_tpl->tpl_vars['navItem1']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['navItem1']->value) {
+$_smarty_tpl->tpl_vars['navItem1']->do_else = false;
+?>
+                <?php if ($_smarty_tpl->tpl_vars['navItem1']->value['status'] == 'visible' && $_smarty_tpl->tpl_vars['navItem1']->value['footer_menu'] == '1') {?>
+                  <li>
+                    <a href="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['navItem1']->value['url'], ENT_QUOTES, 'UTF-8', true);?>
+"><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['navItem1']->value['alias'], ENT_QUOTES, 'UTF-8', true);?>
+</a>
+                  </li>
+                <?php }?>
+              <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
+                                 
+            </ul>
+          </div>
+          <div class="copyright">
+             <p>Copyright © 2019</p> 
+             <p>Разработка сайтов Life Style</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Подключение скриптов -->
+  <?php echo '<script'; ?>
+ src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/js/scripts.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/js/main.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/js/plugins/owl.carousel.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVUinUZqQAIM1NfbavWbOKtsc3l-XE_ag"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ type="text/javascript">
+    if (document.getElementById("map-canvas")) {
+    var map;
+
+    function initialize() {
+
+      var mapOptions = {
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControl: false,
+      zoom: 12,
+      zoomControl: true,
+      zoomControlOptions: {
+        style: google.maps.ZoomControlStyle.DEFAULT,
+        position: google.maps.ControlPosition.DEFAULT
+      },
+      panControl: true,
+      panControlOptions: {
+        position: google.maps.ControlPosition.LEFT_TOP
+      },
+      streetViewControl: false,
+      scaleControl: false,
+      overviewMapControl: false,
+      center: new google.maps.LatLng(41.34765, 69.354354343)
+      };
+
+      map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+      map.setOptions({
+      disableDefaultUI: true
+      });
+
+      var transitLayer = new google.maps.TransitLayer();
+      transitLayer.setMap(map);
+
+      var bicyclingLayer = new google.maps.BicyclingLayer();
+      bicyclingLayer.setMap(map);
+
+      var infoContent = '<div class="window-content align-center">' +
+      '<p>м. Львов, вул. Мирзо Улугбек, 317</p>' +
+      '</div>';
+
+      var infowindow = new google.maps.InfoWindow({
+      content: infoContent
+      });
+
+      var icon = {
+      path: 'M16.5,51s-16.5-25.119-16.5-34.327c0-9.2082,7.3873-16.673,16.5-16.673,9.113,0,16.5,7.4648,16.5,16.673,0,9.208-16.5,34.327-16.5,34.327zm0-27.462c3.7523,0,6.7941-3.0737,6.7941-6.8654,0-3.7916-3.0418-6.8654-6.7941-6.8654s-6.7941,3.0737-6.7941,6.8654c0,3.7916,3.0418,6.8654,6.7941,6.8654z',
+      anchor: new google.maps.Point(16.5, 51),
+      fillColor: '#dd8239',
+      fillOpacity: 1,
+      strokeWeight: 0,
+      scale: 0.9
+      };
+
+      var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(41.34765, 69.354354343),
+      map: map,
+      icon: "<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['THEME_URL']->value, ENT_QUOTES, 'UTF-8', true);?>
+/img/pointer.png",
+      title: 'marker'
+      });
+
+      google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map, marker);
+      });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    function checkResize() {
+      var center = map.getCenter();
+      google.maps.event.trigger(map, 'resize');
+      map.setCenter(center);
+    }
+
+    window.onresize = checkResize;
+    }
+  <?php echo '</script'; ?>
+>
+</body>
+
+</html><?php }
+}
