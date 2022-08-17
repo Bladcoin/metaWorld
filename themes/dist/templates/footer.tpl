@@ -8,7 +8,7 @@
 					<span class="mt-1">{$section.dop}</span>
 					{foreach from=$regex item=item key=key name=name}
 						<a href="{$item.code|strip_tags}" target="_blank" class="ml-3"><img
-								src="{$THEME_URL}{$item.content|strip_tags nofilter}" width="16" height="17" alt=""></a>
+								src="{$THEME_URL}{$item.content|strip_tags|replace:' ':'' nofilter}" width="16" height="17" alt=""></a>
 					{/foreach}
 				</div>
 			</div>
@@ -22,7 +22,7 @@
 
 
 								<a href="{$item.code|strip_tags}" target="_blank" class="mx-2"><img
-										src="{$THEME_URL}{$item.content|strip_tags nofilter}" width="20" height="21" alt=""></a>
+										src="{$THEME_URL}{$item.content|strip_tags|replace:' ':'' nofilter}" width="20" height="21" alt=""></a>
 
 							{/foreach}
 						</div>
@@ -40,7 +40,7 @@
 
 
 							<a href="{$item.code|strip_tags}" target="_blank" class="mx-2"><img
-									src="{$THEME_URL}{$item.content|strip_tags nofilter}" width="20" height="21" alt=""></a>
+									src="{$THEME_URL}{$item.content|strip_tags|replace:' ':'' nofilter}" width="20" height="21" alt=""></a>
 
 
 						{/foreach}
