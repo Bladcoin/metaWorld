@@ -63,7 +63,7 @@
 								{if !$smarty.session.siteUser }
 
 									<button type="button" class="btn btn-primary btn-sm ml-4 px-5" data-toggle="modal"
-										data-target="#loginModal">{$section.alias}</button>
+										data-target="#loginModal">{if $currentLang == "ru"}Присоединиться{else}Join{/if}</button>
 								{else}
 									<form action="/public/sign-out.php" method="POST">
 										<button

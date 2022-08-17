@@ -182,10 +182,10 @@ class SiteUsers
     public function checkUserEmail($email)
     {
         if (!preg_match('/^[A-Z0-9\._\-]+@[A-Z0-9\.\-]+\.[A-Z]{2,4}$/i', $email)) {
-            $this->errors = 'Укажите адрес электронной почты';
+            $this->errors["failed"] = 'Укажите адрес электронной почты';
             return false;
         } elseif (dbQuery('customers', DB_VALUE, array('fields' => 'userId', 'where' => "email='$email'"))) {
-            $this->errors = 'Этот адрес электронной почты уже существует!';
+            $this->errors["failed"] = 'Этот адрес электронной почты уже существует!';
             return false;
         } else {
             return true;
@@ -387,7 +387,7 @@ class SiteUsers
      */
     private function checkUserPassword($password, $password2)
     {
-        if ($password != $password2) $this->errors = 'Данные поля Пароль и Подтверждение пароля различаются!';
+        if ($password != $password2) $this->errors["failed"] = 'Данные поля Пароль и Подтверждение пароля различаются!';
         return false;
     }
 
