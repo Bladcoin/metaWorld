@@ -33,8 +33,12 @@ class SiteUsers
             $userData['password']       = md5($userData['password']);
             $userData['ip']             = $_SERVER['REMOTE_ADDR'];
             $userData['registredOn']    = date('Y-m-d');
-            $userData['birth']          = "$userData[birthYear]-$userData[birthMonth]-$userData[birthDay]";
+            // $userData['birth']          = "0000-00-00 00:00:00";
             $userData['activationCode'] = $this->generateActivationCode($length = 8, $userData['userName']);
+            $userData["login"] = "";
+            $userData["phone"] = "";
+            $userData["name"] = "";
+            $userData["address"] = "";
 
             if ($userData['userId'] = dbQuery('customers', DB_INSERT, array('values' => $userData))) {
                 $confirm_url = SITE_URL . "/public/confirm_register.php?userId=" . $userData["userId"] . "&code=" . $userData["activationCode"];
