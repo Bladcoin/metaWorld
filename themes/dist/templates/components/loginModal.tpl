@@ -74,12 +74,12 @@
 						<button	class="btn btn-lg btn-primary w-100 mb-5">
 							Sign In
 						</button>
-						<span class="text-muted">
+						{* <span class="text-muted">
 							Not a member?
-						</span>
-						<button type="button" class="btn btn-link p-0 text-white small" data-dismiss="modal" data-toggle="modal" data-target="#registrationModal">
+						</span> *}
+						{* <button type="button" class="btn btn-link p-0 text-white small" data-dismiss="modal" data-toggle="modal" data-target="#registrationModal">
 							Sign Up now
-						</button>
+						</button> *}
 					</form>
 
 
