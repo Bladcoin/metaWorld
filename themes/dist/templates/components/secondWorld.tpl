@@ -36,7 +36,7 @@
 						<div class="slide">
 							<img src="{$slide.images.original.url}" width="332" height="453" alt="">
 						</div>
-					{{/foreach}}
+					{/foreach}
 						<div class="slide"></div>
 					</div>
 				</div>

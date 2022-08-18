@@ -66,7 +66,7 @@
 				}
 			})
 		</script>
-		<a href="{$whitepaper.alias}" class="btn btn-primary btn-sm ml-4 px-5">
+		<a href="{$whitepaper.url}" class="btn btn-primary btn-sm ml-4 px-5">
 			{$whitepaper.section_icon}
 		</a>
 	</div>

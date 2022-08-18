@@ -458,8 +458,8 @@ elseif(!empty($action['sortAlphabetically'])){
 
 	if(empty($noItems)){
 		/* перейти родительский раздел, если нет подраздела */
-		if(!empty($parentId) && !dbQuery('sections', DB_VALUE, array('fields'=>'COUNT(*)', 'where'=>"parentId='$parentId'"))){
-			$parentId = dbQuery('sections', DB_VALUE, array('fields'=>'parentId', 'where'=>"sectionId='$parentId'"));
+		if(!empty($parentId) && !dbQuery('sections', DB_ARRAY, array('fields'=>'COUNT(*)', 'where'=>"parentId='$parentId'"))["COUNT(*)"]){
+			$parentId = dbQuery('sections', DB_ARRAY, array('fields'=>'parentId', 'where'=>"sectionId='$parentId'"))["parentId"];
 			header('Location: '.SITE_URL.'/admin/sections.php?parentId='.$parentId);
 			die(lang('sections:noSubsections'));
 		}
