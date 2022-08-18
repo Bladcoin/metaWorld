@@ -57,6 +57,10 @@
 
 {include file="components/registrationModal.tpl"}
 
+{include file="components/newsModal.tpl"}
+
+
+
 <div class="curzr" hidden></div>
 </body>
 

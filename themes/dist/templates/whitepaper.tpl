@@ -71,24 +71,20 @@
 			</div>
 
 			<div class="row nav-buttons">
-				<div class="col-6">
+				<div class="col">
 					<button type="button" class="nav-button nav-prev">
 						<span class="row mx-0 pointer-events-none">
 							<span class="col-auto opacity-50">
 								previous
 							</span>
-							<span class="col nav-button-text">
-								<!--								Экономический/градостроительный симулятор-->
-							</span>
+							<span class="col nav-button-text"></span>
 						</span>
 					</button>
 				</div>
-				<div class="col-6">
+				<div class="col">
 					<button type="button" class="nav-button nav-next">
 						<span class="row mx-0 pointer-events-none">
-							<span class="col nav-button-text">
-								<!--								Экономический/градостроительный симулятор-->
-							</span>
+							<span class="col nav-button-text"></span>
 							<span class="col-auto opacity-50">
 								next
 							</span>
@@ -96,6 +92,7 @@
 					</button>
 				</div>
 			</div>
+
 		</div>
 	</div>
 

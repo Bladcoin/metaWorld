@@ -1350,6 +1350,7 @@ h6,
 }
 
 .news-item {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -1359,9 +1360,10 @@ h6,
 
 .news-image {
 	position: relative;
+	display: block;
 }
 
-.news-image:before {
+.news-image:after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -1378,6 +1380,7 @@ h6,
 }
 
 .news-title {
+	display: block;
 	flex-grow: 1;
 	padding: 10px 20px;
 	text-transform: uppercase;
@@ -1385,6 +1388,7 @@ h6,
 }
 
 .news-date {
+	display: block;
 	padding: 0 15px 10px 15px;
 	text-align: right;
 	font-size: 12px;
@@ -1559,9 +1563,18 @@ h6,
 	max-width: 560px;
 }
 
+.custom-modal .modal-dialog {
+	max-width: 1384px;
+}
+
 .modal-content {
 	background: #323232;
 	border-radius: 0.75rem;
+}
+
+.custom-modal .modal-content {
+	border-radius: 0;
+	border-top: 14px solid #1353d6;
 }
 
 .modal-header {
@@ -1571,10 +1584,18 @@ h6,
 	border-bottom: 0;
 }
 
+.custom-modal .modal-header {
+	padding: 2.5rem 100px 1rem 100px;
+}
+
 .modal-header .modal-title {
 	padding: 0 1.5rem;
 	text-align: center;
 	font: bold 24px 'Onest', sans-serif;
+}
+
+.custom-modal .modal-header .modal-title {
+	margin-bottom: 0.5rem;
 }
 
 .modal-header .close {
@@ -1600,6 +1621,18 @@ h6,
 	padding: 0 100px 30px 100px;
 	font-size: 0.875rem;
 	text-align: center;
+}
+
+@media (max-width: 767px) {
+	.modal-body,
+	.custom-modal .modal-header {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+.custom-modal .modal-body {
+	text-align: inherit;
 }
 
 .toast {
@@ -1702,7 +1735,7 @@ h6,
 	border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.navigation > ul > li.active ul {
+.navigation > ul > li.open ul {
 	visibility: visible;
 	margin: 20px 0 20px 15px;
 	height: auto;
@@ -1712,14 +1745,14 @@ h6,
 	content: '';
 	visibility: visible;
 	position: absolute;
-	right: 30px;
-	top: 14px;
-	width: 6px;
-	height: 12px;
-	background: url("data:image/svg+xml,%3Csvg width='6' height='12' viewBox='0 0 6 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.217309 0.222041C0.508893 -0.0721557 0.983762 -0.0742744 1.27796 0.217309L3.07269 1.99609C3.74866 2.66604 4.30114 3.21359 4.69294 3.70146C5.10037 4.20878 5.39531 4.72372 5.47409 5.34184C5.50864 5.61286 5.50864 5.88714 5.47409 6.15816C5.39531 6.77628 5.10037 7.29122 4.69294 7.79854C4.30114 8.28641 3.74867 8.83396 3.07269 9.5039L1.27796 11.2827C0.983762 11.5743 0.508893 11.5722 0.217309 11.278C-0.0742744 10.9838 -0.0721557 10.5089 0.222041 10.2173L1.98501 8.47C2.7005 7.76086 3.19131 7.27282 3.52341 6.85929C3.846 6.4576 3.95668 6.19958 3.98613 5.9685C4.00462 5.82341 4.00462 5.67659 3.98613 5.5315C3.95668 5.30042 3.846 5.0424 3.52341 4.64071C3.19131 4.22718 2.7005 3.73914 1.98501 3.03L0.222041 1.28269C-0.0721557 0.991107 -0.0742744 0.516238 0.217309 0.222041Z' fill='white'/%3E%3C/svg%3E%0A") 0 0 no-repeat;
+	right: 21px;
+	top: 8px;
+	width: 24px;
+	height: 24px;
+	background: url("data:image/svg+xml,%3Csvg width='6' height='12' viewBox='0 0 6 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.217309 0.222041C0.508893 -0.0721557 0.983762 -0.0742744 1.27796 0.217309L3.07269 1.99609C3.74866 2.66604 4.30114 3.21359 4.69294 3.70146C5.10037 4.20878 5.39531 4.72372 5.47409 5.34184C5.50864 5.61286 5.50864 5.88714 5.47409 6.15816C5.39531 6.77628 5.10037 7.29122 4.69294 7.79854C4.30114 8.28641 3.74867 8.83396 3.07269 9.5039L1.27796 11.2827C0.983762 11.5743 0.508893 11.5722 0.217309 11.278C-0.0742744 10.9838 -0.0721557 10.5089 0.222041 10.2173L1.98501 8.47C2.7005 7.76086 3.19131 7.27282 3.52341 6.85929C3.846 6.4576 3.95668 6.19958 3.98613 5.9685C4.00462 5.82341 4.00462 5.67659 3.98613 5.5315C3.95668 5.30042 3.846 5.0424 3.52341 4.64071C3.19131 4.22718 2.7005 3.73914 1.98501 3.03L0.222041 1.28269C-0.0721557 0.991107 -0.0742744 0.516238 0.217309 0.222041Z' fill='white'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
 }
 
-.navigation > ul > li.active ul:before {
+.navigation > ul > li.open ul:before {
 	transform: rotate(90deg);
 }
 
@@ -1798,10 +1831,27 @@ h6,
 	white-space: nowrap;
 }
 
+.nav-prev .nav-button-text {
+	text-align: right;
+}
+
+.nav-next .nav-button-text {
+	text-align: left;
+}
+
 .pointer-events-none {
 	pointer-events: none;
 }
 
 .opacity-50 {
 	opacity: 0.5;
+}
+
+.form-signin {
+	width: 100%;
+	max-width: 400px;
+}
+
+.news-hide{
+	display: none;
 }

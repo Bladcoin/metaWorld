@@ -17,6 +17,7 @@
 	<script src="assets/chart.js/chart.min.js"></script>
 	<script src="assets/chart.js/chartjs-plugin-datalabels.min.js"></script>
 	<script src="assets/chart.js/chartjs-plugin-outlabels3.umd.min.js"></script>
+	<script src="assets/jquery.validate/jquery.validate.min.js"></script>
 	<script src="js/second-world.js"></script>
 	<title>SECOND WORLD</title>
 </head>
@@ -697,90 +698,89 @@
 				</div>
 			</section>
 
-			<!--
 			<section class="section section-news d-flex flex-column justify-content-center" id="news">
 				<div class="container">
 					<div class="h2">Новости</div>
 					<div class="row">
 						<div class="col-6 mb-4">
-							<div class="news-item news-featured">
-								<div class="news-image">
-									<a href="#"><img src="/images/news-1.png" class="img-fluid" alt=""></a>
-								</div>
-								<div class="news-info">
-									<div class="news-title">
+							<a href="#" data-toggle="modal" data-target="#newsModal" class="news-item news-featured">
+								<span class="news-image">
+									<img src="/images/news-1.png" class="img-fluid" alt="">
+								</span>
+								<span class="news-info">
+									<span class="news-title">
 										Watch footage trailer
-									</div>
-									<div class="news-excerpt">
+									</span>
+									<span class="news-excerpt">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci at bibendum tristique tristique in et. Nunc vel quis aenean imperdiet consectetur dolor a, tincidunt in. Pretium integer scelerisque sit enim velit, nascetur sit diam rhoncus. Ut natoque semper elementum fringilla purus. Sed viverra gravida sed proin ornare. Tortor sed nunc aliquam sit.
-									</div>
-									<div class="news-date">
+									</span>
+									<span class="news-date">
 										22.12.2022
-									</div>
-								</div>
-							</div>
+									</span>
+								</span>
+							</a>
 						</div>
 						<div class="col-6">
 							<div class="row">
 								<div class="col-6 mb-4">
-									<div class="news-item">
-										<div class="news-image">
-											<a href="#"><img src="/images/news-2.png" class="img-fluid" alt=""></a>
-										</div>
-										<div class="news-info">
-											<div class="news-title">
+									<a href="#" class="news-item">
+										<span class="news-image">
+											<img src="/images/news-2.png" class="img-fluid" alt="">
+										</span>
+										<span class="news-info">
+											<span class="news-title">
 												Ut natoque semper elementum fringilla
-											</div>
-											<div class="news-date">
+											</span>
+											<span class="news-date">
 												21.12.2022
-											</div>
-										</div>
-									</div>
+											</span>
+										</span>
+									</a>
 								</div>
 								<div class="col-6 mb-4">
-									<div class="news-item">
-										<div class="news-image">
-											<a href="#"><img src="/images/news-3.png" class="img-fluid" alt=""></a>
-										</div>
-										<div class="news-info">
-											<div class="news-title">
+									<a href="#" class="news-item">
+										<span class="news-image">
+											<img src="/images/news-3.png" class="img-fluid" alt="">
+										</span>
+										<span class="news-info">
+											<span class="news-title">
 												Fringilla purus
-											</div>
-											<div class="news-date">
+											</span>
+											<span class="news-date">
 												14.12.2022
-											</div>
-										</div>
-									</div>
+											</span>
+										</span>
+									</a>
 								</div>
 								<div class="col-6 mb-4">
-									<div class="news-item">
-										<div class="news-image">
-											<a href="#"><img src="/images/news-4.png" class="img-fluid" alt=""></a>
-										</div>
-										<div class="news-info">
-											<div class="news-title">
+									<a href="#" class="news-item">
+										<span class="news-image">
+											<img src="/images/news-4.png" class="img-fluid" alt="">
+										</span>
+										<span class="news-info">
+											<span class="news-title">
 												Title 1
-											</div>
-											<div class="news-date">
+											</span>
+											<span class="news-date">
 												03.09.2022
-											</div>
-										</div>
-									</div>
+											</span>
+										</span>
+									</a>
 								</div>
 								<div class="col-6 mb-4">
-									<div class="news-item">
-										<div class="news-image">
-											<a href="#"><img src="/images/news-5.png" class="img-fluid" alt=""></a>
-										</div>
-										<div class="news-info">
-											<div class="news-title">
+									<a href="#" class="news-item">
+										<span class="news-image">
+											<img src="/images/news-5.png" class="img-fluid" alt="">
+										</span>
+										<span class="news-info">
+											<span class="news-title">
 												Title 2
-											</div>
-											<div class="news-date">
+											</span>
+											<span class="news-date">
 												03.04.2022
-											</div>
-										</div>
-									</div>
+											</span>
+										</span>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -790,7 +790,7 @@
 					</div>
 				</div>
 			</section>
-
+			<!--
 			<section class="section section-team d-flex flex-column justify-content-center">
 				<div class="container">
 					<div class="h2">Our team</div>
@@ -964,6 +964,33 @@
 				</div>
 			</div>
 		</footer>
+	</div>
+
+	<div class="modal custom-modal fade" id="newsModal" tabindex="-1">
+		<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<div class="modal-title text-center">
+						Watch footage trailer
+					</div>
+					<div class="news-date p-0">
+						22.12.2022
+					</div>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rhoncus interdum a in eget arcu aliquam varius pharetra, purus. Id duis egestas vel volutpat. Interdum egestas dolor lectus eget condimentum libero integer sed facilisis. Vel feugiat odio sem curabitur condimentum id sed. Elit, vel bibendum odio quis volutpat elit sodales ultrices.</p>
+					<p>Eget eu fermentum a enim scelerisque elementum mauris pulvinar. Donec magna et consectetur ac adipiscing tincidunt risus aliquet egestas. Ac et aliquam cras id. Nunc dictumst nisi porttitor arcu dictum convallis elementum nunc et. Egestas erat aenean ultrices purus molestie vel arcu accumsan. Non donec consectetur enim cras purus volutpat lacus, sem. A pharetra et et ac varius neque pellentesque non cursus. Nunc risus vitae, integer nec gravida faucibus. Eros tellus donec ullamcorper malesuada gravida varius quis quisque. Amet sem condimentum aliquam platea facilisis quisque. Nec vulputate vel odio habitasse sit orci porttitor vulputate. Pellentesque mauris at aliquam eleifend enim sodales.</p>
+					<p>Nunc consequat ac non purus lacus vulputate. Molestie volutpat massa quis congue at mi egestas. Amet massa vulputate varius ornare gravida elementum eget egestas sed. Senectus gravida at elit quam pretium a vel, risus. Lectus lobortis elementum massa fames gravida imperdiet vitae ut. Arcu lacus, lectus pellentesque ultrices. Hac magna arcu dui ultrices. Lobortis tellus sit mollis placerat proin sed justo. Nulla interdum commodo nisl vulputate faucibus aliquet quam mattis vulputate. Laoreet vitae lacinia tellus ullamcorper.</p>
+					<p><img src="images/temp.jpg" class="w-100" alt=""></p>
+					<p>Amet, consectetur eu aliquet dolor, tellus sit vestibulum elementum non. At fermentum sed fermentum cum quam nulla justo, amet. Amet egestas sit dictum sit.</p>
+					<p>Ultrices urna sed elementum ullamcorper ullamcorper vulputate duis vitae id. Non tortor sem tincidunt magna eget cras. Vel tortor rutrum mauris vitae leo odio quam. Iaculis vulputate gravida blandit praesent ut tellus. Commodo nulla ut volutpat scelerisque. Vel nibh pellentesque fames iaculis tortor pretium lacus, lorem.</p>
+					<p>Habitant integer nulla volutpat morbi consectetur ultricies quam risus. Ipsum sit feugiat tortor tortor amet ornare cras. In turpis pretium viverra tincidunt. Lacus.</p>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div class="modal fade" id="loginModal" tabindex="-1">
