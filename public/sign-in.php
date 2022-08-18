@@ -6,7 +6,10 @@ if (defined('SITE_URL')) {
 	global $smarty, $config;
 	$sign_in = getRequestVar('sign_in', '', $noEscape = true);
 
-	if (!$sign_in ) header('Location:' . SITE_URL);
+	if (!$sign_in ) {
+		header('Location:' . SITE_URL);
+	    die();
+	}
 	if ($sign_in) {
 		$SiteUsers->checkLogin($sign_in['email'], $sign_in['password']);
 		if ($SiteUsers->errors) {
@@ -18,5 +21,10 @@ if (!empty($SiteUsers->messages)) $smarty->assign('messages', $SiteUsers->messag
 if (!empty($errors)) {
 	$smarty->assign('errors', $errors);
 }
+
+$where[] = "sectionId='1'";
+$section = dbQuery("sections", DB_ARRAY, array("where" => $where));
+
+$smarty->assign("section", $section);
 
 $smarty->display("index.tpl");
