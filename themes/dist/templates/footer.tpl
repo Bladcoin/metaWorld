@@ -55,7 +55,7 @@
 
 {include file="components/forgotPassword.tpl"}
 
-{* {include file="components/registrationModal.tpl"} *}
+{include file="components/registrationModal.tpl"} 
 
 {include file="components/newsModal.tpl"}
 
