@@ -99,14 +99,15 @@ function dbQuery($table, $type, $params = array())
 			break;
 
 		case DB_INSERT:
-
+             
 			if (is_array($values)) {
 				$fieldNames = dbRawQuery("SHOW COLUMNS FROM $table", 'Field');
-				foreach (array_keys($fieldNames) as $fieldName) if (isset($values[$fieldName])) $fieldSets[] = $fieldName . "='" . $values[$fieldName] . "'";
+				foreach (array_keys($fieldNames) as $fieldName) if (isset($values[$fieldName]) && substr(strtolower($fieldName), -2 ) != "id" ) $fieldSets[] = $fieldName . "='" . $values[$fieldName] . "'";
 				$result = dbRawQuery("INSERT INTO $table SET " . implode(", ", $fieldSets));
 			} else {
 				$result = dbRawQuery("INSERT INTO $table VALUES($values)");
 			}
+			
 			return mysqli_insert_id($MUSQLILINK);
 
 			break;

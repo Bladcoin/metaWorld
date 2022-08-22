@@ -145,6 +145,16 @@
 				$section['modifiedBy'] = $adminUser['userId'];
 				$section['modifiedOn'] = gmdate('Y-m-d H:i:s');
 				$section['sortOrder']  = dbQuery('sections', DB_VALUE, array('fields'=>'MAX(sortOrder)', 'where'=>"parentId='$section[parentId]'")) + 1;
+				$section["url"] = "";
+				$section["toSlider"] = 0;
+				$section["footerMenu"] = 0;
+				$section["top_submenu"] = 0;
+				$section["photo_gallery"] = 0;
+				$section["footer_menu"] = 0;
+				$section["footer_menu"] = 0;
+				$section["menus"] = "";
+				$section["isFeatured"] = 0;
+				$section["block"] = "";
 
 				if($section['sectionId'] = dbQuery('sections', DB_INSERT, array('values'=>$section))){
 					
