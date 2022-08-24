@@ -248,7 +248,7 @@
 	} elseif(!empty($action['deleteSectionImage']) && !empty($section['sectionId'])){
 		$where[] = "sectionId='$section[sectionId]'";
 		
-		if($sectionId = dbQuery('sections', DB_VALUE, array('where'=>$where, 'fields'=>'sectionId'))){
+		if($sectionId = dbQuery('sections', DB_ARRAY, array('where'=>$where, 'fields'=>'sectionId'))["sectionId"]){
 			$images = dbQuery('section_images', DB_ARRAYS, array('where'=>"sectionId='$sectionId' AND codename<>''", 'indexKey'=>'codename'));
 			foreach($images as $image) @unlink(SITE_ROOT."/uploads/sections/$section[sectionId]/$image[fileName]");
 			dbQuery('section_images', DB_DELETE, array('where'=>"sectionId='$sectionId' AND codename<>''"));
