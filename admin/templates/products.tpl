@@ -561,7 +561,7 @@
                                         {/if}
                                     </td>
                                     <td width="100%">
-                                        <a href="{if $article.status eq 'visible'}{$article.url}{else}{$SITE_URL}/preview.php?articleId={$article.articleId}{/if}" target="_blank">{$article.title|truncate:75}</a>
+                                        <span href="{if $article.status eq 'visible'}{$article.url}{else}{$SITE_URL}/preview.php?articleId={$article.articleId}{/if}" target="_blank">{$article.title|truncate:75}</span>
                                     </td>
                                     <td nowrap="nowrap"><span data-toggle="tooltip" data-placement="top" data-original-title="{$article.section.name}">{$article.section.name|truncate:25}</span></td>
                                     <td class="text-center" nowrap="nowrap">
