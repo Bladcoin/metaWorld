@@ -3,12 +3,19 @@
 
 
 <section class="section section-features">
-		<div class="accordion">
-			<div class="row m-0 h-100">
-            {foreach from=$slides item=slide key=key name=name}
-                <div class="accordion-item col">
+	<div class="accordion">
+		<div class="row m-0 h-100">
+			{foreach from=$slides item=slide key=key name=name}
+				<div class="accordion-item col {if $slide.articleId == 1128 }accordion-characters curzr-hover{/if}">
 					<div class="accordion-item-bg">
 						<img src="{$slide.images.original.url}" alt="">
+						{bracket_regex from=$slide.content}
+						{if $slide.articleId == 1128}
+							<video src="{$THEME_URL}/video/male.mkv" preload muted loop></video>
+							<video src="{$THEME_URL}/video/female.mkv" preload muted loop></video>
+							<video src="{$THEME_URL}/video/helmet.mkv" preload muted loop></video>
+							<video src="{$THEME_URL}/video/glasses.mp4" preload muted loop></video>
+						{/if}
 					</div>
 					<div class="accordion-next">
 						Вперед
@@ -20,10 +27,10 @@
 						<div class="accordion-item-description">{$slide.summary nofilter}</div>
 					</div>
 				</div>
-            {/foreach}
-				
+			{/foreach}
 
-				{* <div class="accordion-item col">
+
+			{* <div class="accordion-item col">
 					<div class="accordion-item-bg">
 						<img src="images/accordion-2.jpg" alt="">
 					</div>
@@ -47,7 +54,7 @@
 						</div>
 					</div>
 				</div> *}
-				{* <div class="accordion-item col">
+			{* <div class="accordion-item col">
 					<div class="accordion-item-bg">
 						<img src="images/accordion-3.jpg" alt="">
 					</div>
@@ -72,7 +79,7 @@
 						</div>
 					</div>
 				</div> *}
-				{* <div class="accordion-item col">
+			{* <div class="accordion-item col">
 					<div class="accordion-item-bg">
 						<img src="images/accordion-4.jpg" alt="">
 					</div>
@@ -90,6 +97,6 @@
 						</div>
 					</div>
 				</div> *}
-			</div>
 		</div>
-	</section>
+	</div>
+</section>
