@@ -298,7 +298,7 @@
 		if(empty($adminUser['permitAllSections'])) $where[] = "sectionId IN(".implode(',', $allowedSections).")";
 
 		/* deleting image */
-		if($articleId = dbQuery('articles', DB_VALUE, array('where'=>$where, 'fields'=>'articleId'))){
+		if($articleId = dbQuery('articles', DB_ARRAY, array('where'=>$where, 'fields'=>'articleId'))["articleId"]){
 			$images = dbQuery('article_images', DB_ARRAYS, array('where'=>"articleId='$articleId' AND codename<>''", 'indexKey'=>'codename'));
 			foreach($images as $image) @unlink(SITE_ROOT."/uploads/articles/$article[articleId]/$image[fileName]");
 			dbQuery('article_images', DB_DELETE, array('where'=>"articleId='$articleId' AND codename<>''"));
