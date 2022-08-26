@@ -1,40 +1,50 @@
 {fetch_section assign=whitepaper section=1000 }
+
+
+{append var='periods' value='' index=0}
+{append var='data' value='' index=0}
+{append var='colors' value='' index=0}
+
+{bracket_regex from=$whitepaper.summary}
+{foreach from=$regex item=periodItem key=key name=name}
+	{$periods[$key] = $periodItem.code|strip_tags}
+	{$data[$key] = $periodItem.content|strip_tags}
+
+{/foreach}
+
+{bracket_regex from=$whitepaper.content_two}
+{foreach from=$regex item=colorItem key=key name=name}
+	{$colors[$key] = $colorItem.content|strip_tags}
+{/foreach}
+
+
+
 <section class="section section-chart d-flex flex-column justify-content-center">
 	<div class="container">
 		<div class="chart">
-			<video src="/video/water.mp4" autoplay muted loop></video>
+			<video src="{$THEME_URL}/video/water.mp4" autoplay muted loop></video>
 			<canvas id="chart"></canvas>
 		</div>
 		<script>
+			
+
+
+			let periods = [{foreach from=$periods item=period key=key name=name}"{$period|strip_tags|replace:" ": ""}"{if !$smarty.foreach.name.last},{/if}{/foreach}];
+			let colors  = [{foreach from=$colors item=color key=key name=name}"{$color|strip_tags|replace:" ": ""}"{if !$smarty.foreach.name.last},{/if}{/foreach}];
+			let data  = [{foreach from=$data item=item key=key name=name}"{$item|strip_tags|replace:" ": ""}"{if !$smarty.foreach.name.last},{/if}{/foreach}].map(item => +item);
+            
+		    {literal}
 			new Chart('chart', {
 				type: 'doughnut',
+
 				data: {
-					labels: [
-						'ONE',
-						'TWO',
-						'THREE',
-						'FOUR',
-						'FIVE',
-						'SIX',
-						'SEVEN',
-						'EIGHT',
-						'NINE',
-					],
+					labels: periods,
 					datasets: [{
-						backgroundColor: [
-							'#FF3784',
-							'#36A2EB',
-							'#4BC0C0',
-							'#F77825',
-							'#9966FF',
-							'#00A8C6',
-							'#379F7A',
-							'#CC2738',
-							'#8B628A',
-						],
-						data: [11, 12, 13, 14, 15, 16, 17, 18, 19],
+						backgroundColor: colors,
+						data: data,
 					}]
 				},
+
 				options: {
 					cutout: '55%',
 					borderWidth: 0,
@@ -65,6 +75,7 @@
 					}
 				}
 			})
+			{/literal}
 		</script>
 		<a href="{$whitepaper.url}" class="btn btn-primary btn-sm ml-4 px-5">
 			{$whitepaper.section_icon}

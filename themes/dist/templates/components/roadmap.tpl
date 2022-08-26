@@ -14,9 +14,18 @@
 	<div class="container">
 		<div class="roadmap row">
 
+
+			{php}
+
+			$already = false;
+			$_smarty_tpl->assign("already", $already );
+
+			{/php}
+
 			{foreach from=$items item=item key=key name=roadmapCycle  }
 
-				<div class="roadmap-item col highlight">
+				<div class="roadmap-item col {if !$already } highlight{/if}">
+				{if $item.avail == true } {$already = true} {/if}
 					{if $key == 0 }
 						<div class="we-are-here">
 							{$item.title}

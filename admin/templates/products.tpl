@@ -126,8 +126,8 @@
                                     </div> *}
                                     <div class="form-group">
                                       <div class="col-md-6 nopadding">
-                                          <div class="check_box"><label><input type="radio" name="article[avail]" value="1"  {if $article.avail} checked{/if} /><i>В наличии</i></label></div>
-                                          <div class="check_box"><label><input type="radio" name="article[avail]" value="0"  {if !$article.avail} checked{/if} /><i>Нет в наличии</i></label></div>
+                                          <div class="check_box"><label><input type="radio" name="article[avail]" value="1"  {if $article.avail} checked{/if} /><i>Мы здесь</i></label></div>
+                                          <div class="check_box"><label><input type="radio" name="article[avail]" value="0"  {if !$article.avail} checked{/if} /><i>Пройденный этап</i></label></div>
                                       </div>
                                     </div>
 
