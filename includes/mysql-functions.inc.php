@@ -102,7 +102,8 @@ function dbQuery($table, $type, $params = array())
              
 			if (is_array($values)) {
 				$fieldNames = dbRawQuery("SHOW COLUMNS FROM $table", 'Field');
-				foreach (array_keys($fieldNames) as $fieldName) if (isset($values[$fieldName]) && substr(strtolower($fieldName), -2 ) != "id" ) $fieldSets[] = $fieldName . "='" . $values[$fieldName] . "'";
+				// substr(strtolower($fieldName), -2 ) != "id"
+				foreach (array_keys($fieldNames) as $fieldName) if (isset($values[$fieldName]) && $fieldName !== "articleId" ) $fieldSets[] = $fieldName . "='" . $values[$fieldName] . "'";
 				$result = dbRawQuery("INSERT INTO $table SET " . implode(", ", $fieldSets));
 			} else {
 				$result = dbRawQuery("INSERT INTO $table VALUES($values)");
