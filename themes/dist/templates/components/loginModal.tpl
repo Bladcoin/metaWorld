@@ -77,9 +77,9 @@
 						{* <span class="text-muted">
 							Not a member?
 						</span> *}
-						<button type="button" class="btn btn-link p-0 text-white small" data-dismiss="modal" data-toggle="modal" data-target="#registrationModal">
+						{* <button type="button" class="btn btn-link p-0 text-white small" data-dismiss="modal" data-toggle="modal" data-target="#registrationModal">
 							Sign Up now
-						</button>
+						</button> *}
 						
 					</form>
 
