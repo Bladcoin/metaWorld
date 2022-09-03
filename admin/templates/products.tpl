@@ -622,6 +622,7 @@
 </div> 
 
 <script>
+
     var articleId = '{$article.articleId}';
     {literal}
     $(document).ready(function () {
@@ -629,7 +630,7 @@
         $("#dZUpload").dropzone({ 
             url: "products.php", 
             addRemoveLinks: false, 
-            maxFilesize: 2,
+            maxFilesize: 10,
             acceptedFiles: "image/*",
             params: {'action':'uploadImage','articleId': articleId},
             success: function (file, response) { 
@@ -659,7 +660,7 @@
         allowedFileExtensions: ["jpg", "jpeg", "gif", "png"],
         elErrorContainer: "#errorBlock",
         overwriteInitial: true,
-        maxFileSize: 1000
+        maxFileSize: 10000
     });
     
     $(".edit_image").click(function() {
