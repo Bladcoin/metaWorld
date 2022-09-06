@@ -11,10 +11,10 @@
 						<img src="{$slide.images.original.url}" alt="">
 						{bracket_regex from=$slide.content}
 						{if $slide.articleId == 1128}
-							<video src="{$THEME_URL}/video/male.mkv" preload muted loop></video>
-							<video src="{$THEME_URL}/video/female.mkv" preload muted loop></video>
-							<video src="{$THEME_URL}/video/helmet.mkv" preload muted loop></video>
-							<video src="{$THEME_URL}/video/glasses.mp4" preload muted loop></video>
+							<video src="{$THEME_URL}/video/male.mp4" pip="false" preload muted loop></video>
+							<video src="{$THEME_URL}/video/female.mp4" pip="false" preload muted loop></video>
+							<video src="{$THEME_URL}/video/helmet.mp4" pip="false" preload muted loop></video>
+							<video src="{$THEME_URL}/video/glasses.mp4" pip="false" preload muted loop></video>
 						{/if}
 					</div>
 					<div class="accordion-next">

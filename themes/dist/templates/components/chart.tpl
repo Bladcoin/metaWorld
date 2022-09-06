@@ -22,63 +22,70 @@
 <section class="section section-chart d-flex flex-column justify-content-center">
 	<div class="container">
 		<div class="chart">
-			<video src="{$THEME_URL}/video/water.mp4" autoplay muted loop></video>
-			<canvas id="chart"></canvas>
-		</div>
-		<script>
-			
+			<div class="video">
+				<video src="{$THEME_URL}/video/water.mp4" autoplay muted loop></video>
+				<canvas id="chart"></canvas>
+			</div>
+			<script>
+				let periods = [{foreach from=$periods item=period key=key name=name}"{$period|strip_tags|replace:" ": ""}"
+					{if !$smarty.foreach.name.last},
+					{/if}
+				{/foreach}];
+				let colors  = [{foreach from=$colors item=color key=key name=name}"{$color|strip_tags|replace:" ": ""}"
+					{if !$smarty.foreach.name.last},
+					{/if}
+				{/foreach}];
+				let data  = [{foreach from=$data item=item key=key name=name}"{$item|strip_tags|replace:" ": ""}"
+					{if !$smarty.foreach.name.last},
+					{/if}
+				{/foreach}].map(item => +item);
 
+				{literal}
+					new Chart('chart', {
+						type: 'doughnut',
 
-			let periods = [{foreach from=$periods item=period key=key name=name}"{$period|strip_tags|replace:" ": ""}"{if !$smarty.foreach.name.last},{/if}{/foreach}];
-			let colors  = [{foreach from=$colors item=color key=key name=name}"{$color|strip_tags|replace:" ": ""}"{if !$smarty.foreach.name.last},{/if}{/foreach}];
-			let data  = [{foreach from=$data item=item key=key name=name}"{$item|strip_tags|replace:" ": ""}"{if !$smarty.foreach.name.last},{/if}{/foreach}].map(item => +item);
-            
-		    {literal}
-			new Chart('chart', {
-				type: 'doughnut',
+						data: {
+							labels: periods,
+							datasets: [{
+								backgroundColor: colors,
+								data: data,
+							}]
+						},
 
-				data: {
-					labels: periods,
-					datasets: [{
-						backgroundColor: colors,
-						data: data,
-					}]
-				},
-
-				options: {
-					cutout: '55%',
-					borderWidth: 0,
-					aspectRatio: 4 / 3,
-					layout: {
-						padding: 100
-					},
-					plugins: {
-						legend: false,
-						tooltip: false,
-						outlabels: {
-							text: '%l %p',
-							color: 'white',
-							padding: {
-								top: 9,
-								right: 10,
-								bottom: 6,
-								left: 10
+						options: {
+							cutout: '55%',
+							borderWidth: 0,
+							aspectRatio: 4 / 3,
+							layout: {
+								padding: 100
 							},
-							length: 80,
-							font: {
-								resizable: true,
-								lineHeight: 1,
-								minSize: 14,
-								maxSize: 20
+							plugins: {
+								legend: false,
+								tooltip: false,
+								outlabels: {
+									text: '%l %p',
+									color: 'white',
+									padding: {
+										top: 9,
+										right: 10,
+										bottom: 6,
+										left: 10
+									},
+									length: 80,
+									font: {
+										resizable: true,
+										lineHeight: 1,
+										minSize: 14,
+										maxSize: 20
+									}
+								}
 							}
 						}
-					}
-				}
-			})
-			{/literal}
-		</script>
-		<a href="{$whitepaper.url}" class="btn btn-primary btn-sm ml-4 px-5">
-			{$whitepaper.section_icon}
-		</a>
-	</div>
+					})
+				{/literal}
+			</script>
+			<a href="{$whitepaper.url}" class="btn btn-primary btn-sm ml-4 px-5">
+				{$whitepaper.section_icon}
+			</a>
+		</div>
 </section>
