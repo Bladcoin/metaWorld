@@ -648,7 +648,7 @@
         allowedFileExtensions: ["jpg", "jpeg", "gif", "png"],
         elErrorContainer: "#errorBlock",
         overwriteInitial: true,
-        maxFileSize: 2000
+        maxFileSize: 30000
     });
 
     $('.top_menu').click(function(){	

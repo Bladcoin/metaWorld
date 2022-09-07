@@ -23,9 +23,10 @@
 	<div class="container">
 		<div class="chart">
 			<div class="video">
-				<video src="{$THEME_URL}/video/water.mp4" autoplay muted loop></video>
-				<canvas id="chart"></canvas>
+				<video src="{$THEME_URL}/video/water.mp4" pip="false" autoplay muted loop></video>
 			</div>
+			<canvas id="chart"></canvas>
+
 			<script>
 				let periods = [{foreach from=$periods item=period key=key name=name}"{$period|strip_tags|replace:" ": ""}"
 					{if !$smarty.foreach.name.last},

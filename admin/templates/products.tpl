@@ -660,7 +660,7 @@
         allowedFileExtensions: ["jpg", "jpeg", "gif", "png"],
         elErrorContainer: "#errorBlock",
         overwriteInitial: true,
-        maxFileSize: 10000
+        maxFileSize: 30000
     });
     
     $(".edit_image").click(function() {
