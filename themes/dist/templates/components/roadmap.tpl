@@ -26,7 +26,7 @@
 
 				<div class="roadmap-item col {if !$already } highlight{/if}">
 				{if $item.avail == true } {$already = true} {/if}
-					{if $key == 0 }
+					{if $item.avail == true }
 						<div class="we-are-here">
 							{$item.title}
 						</div>
