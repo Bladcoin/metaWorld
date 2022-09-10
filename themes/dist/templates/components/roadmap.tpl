@@ -31,7 +31,7 @@
 					{if $item.avail == true && !$we_are_here }
 						{$we_are_here = true}
 						<div class="we-are-here">
-							{$item.title}
+							Мы тут
 						</div>
 					{/if}
 					<div class="d-flex flex-column h-100">
