@@ -20,6 +20,7 @@
 			$already = false;
             $we_are_here = false;
 			$_smarty_tpl->assign("already", $already );
+			$_smarty_tpl->assign("we_are_here", $we_are_here );
   
 			{/php}
 
